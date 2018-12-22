@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+// hover-over #img1 to append #myresult
+// $(document).ready(function() {
+//     $("#img1").hover(function() {
+//         $(this).append($("#myresult"));
+//         }, function() {
+//             $(this).find("myresult:last").remove();
+//         }
+//     );
+// );
+// }
+// $(".row").append($("#id"))
+
+// function normalImg() {}
+</script>
+    <title>Corey Skeens Art</title>
+    <!-- "Portfolio" -->
+</head>
+<body>
+<!-- nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Corey Skeens</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <!-- menu: "Home" "Drawings" "Contact" -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+</div>
+</nav>
+
+
+<!-- small button in left gutter "<-" that leads to index.html -->
+<!-- Photo Grid -- responsive images using Bootstrap -->
+<div class="container img-zoom-container">
+    <div class="row"> 
+        <div class="col-3">
+            <img id="img1" src="img1.jpg" class="img-fluid tooltip" alt="Responsive image">
+            <div id="myresult" class="img-zoom-result tooltiptext" alt="Zoom"></div>
+            <img src="img2.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img4.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img5.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-3">
+            <img src="img6.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img7.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img11.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img12.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img13.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-3">
+            <img src="img8.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img9.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img10.jpg" class="img-fluid" alt="Responsive image">
+        <div class="col-3">
+        <img src="img14.jpg" class="img-fluid" alt="Responsive image">
+        <img src="img15.jpg" class="img-fluid" alt="Responsive image">
+        <img src="img16.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-3">
+        <img src="img17.jpg" style="width:100%">
+        <img src="img18.jpg" style="width:100%">
+        <img src="img19.jpg" style="width:100%"> -->
+        </div>
+        <div class="col-3">
+        <img src="img20.jpg" style="width:100%">
+        <img src="img4.jpg" style="width:100%">
+        </div>
+    </div>
+</div>
+
+<script>
+imageZoom("img1", "myresult");
+</script>
+</body>
+</html>
+
+
+
+
+<!-- small button in right gutter "->" that leads to contact.html -->
+ 
+<!-- Footer -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
