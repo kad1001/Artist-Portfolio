@@ -34,7 +34,7 @@
       img.addEventListener("touchmove", moveMagnifier);
       function moveMagnifier(e) {
         var pos, x, y;
-        /*prevent any other actions that may occur when moving over the image*/
+        /*prevent any other actions that may occur when moving over the image:*/
         e.preventDefault();
         /*get the cursor's x and y positions:*/
         pos = getCursorPos(e);
@@ -81,11 +81,11 @@
       <!-- menu: "Home" "Drawings" "Contact" -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home </a>
-        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="portfolio.html">Portfolio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home  <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -97,18 +97,16 @@
     </div>
   </nav>
 </div>
-<!-- image slideshow w/zoom -->
-
 <div class="jumbotron">
   <div class="slideshow-container">
     <div class="img-magnifier-container mySlides">
-      <img id="img1" src="img1.jpg" class="img-fluid" alt="Responsive image 1">
+      <img id="img1" src="img1.jpg" width="800" height="600">
     </div>
     <div class="img-magnifier-container mySlides">
-      <img id="img2" src="img2.jpg" class="img-fluid" alt="Image 2">
+      <img id="img2" src="img2.jpg" width="800" height="600" >
     </div>
     <div class="img-magnifier-container mySlides">
-      <img id="img4" src="img4.jpg" class="img-fluid" alt="Image 3">
+      <img id="img4" src="img4.jpg" width="800" height="600">
     </div>
   </div>
 </div>
@@ -117,10 +115,6 @@
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 <script>
-// let photoAry = [
-//   img1 = document.getElementById("img1");
-//   img2 = document.getElementById("img2");
-// ]
 
 magnify("img1", 2);
 magnify("img2", 2);
@@ -148,7 +142,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 </script>
-<!-- small button in right gutter "->" that leads to portfolio.html -->
+
+<!-- <div class="footer" style="width: 100%">Copyright Kelly Davis 2019 kad1001.github.io</p>
+</div> -->
+
 
 <!-- footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

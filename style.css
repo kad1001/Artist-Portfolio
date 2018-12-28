@@ -15,16 +15,15 @@
   .header {
     text-align: center;
     padding: 32px;
+    width: 100%;
   }
 
 .mySlides {display: none}
 img {vertical-align: middle;}
 
-/* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin-left: 15%;
 }
 
 /* Next & previous buttons */
@@ -49,21 +48,20 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
+.img-magnifier-container {
+  position:relative;
+}
 
-  .img-magnifier-container {
-    position: relative;
-  }
-  
-  .img-magnifier-glass {
-    position: absolute;
-    border: 3px solid #000;
-    border-radius: 50%;
-    cursor: none;
-    /*Set the size of the magnifier glass:*/
-    width: 300px;
-    height: 300px;
-    z-index: 1;
-  }
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+}
+
 
 .container {
     flex-direction: row;
@@ -94,3 +92,16 @@ img {vertical-align: middle;}
     }
   } 
 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+  }
+
+  .sticky-top {
+    width: 100%;
+  }
