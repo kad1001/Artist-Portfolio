@@ -65,6 +65,12 @@ img {vertical-align: middle;}
   height: 150px;
 }
 
+#hide {
+  display: none;
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+}
 
 .btn {
   width: 100px;
@@ -72,11 +78,6 @@ img {vertical-align: middle;}
   position: relative;
 }
 
-.container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
 
 .img-thumbnail {
   width: 200px;
@@ -113,4 +114,27 @@ img {vertical-align: middle;}
 
   .sticky-top {
     width: 100%;
+  }
+
+/* image portfolio gallery */
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
   }
