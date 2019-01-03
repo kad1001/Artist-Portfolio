@@ -52,13 +52,16 @@ function magnify(imgID, zoom) {
       y = y - window.pageYOffset;
       return {x : x, y : y};
     }
-  } 
-  
+}
+
+
 function onClick() {
     magnify("img1", 1.5);
     magnify("img2", 1.5);
     magnify("img4", 1.5);
     }
+
+
     
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -81,4 +84,3 @@ function onClick() {
       }
       slides[slideIndex-1].style.display = "block";  
     }
-    

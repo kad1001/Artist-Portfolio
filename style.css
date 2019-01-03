@@ -52,6 +52,10 @@ img {vertical-align: middle;}
   position:relative;
 }
 
+.img {
+  max-width: 300px;
+}
+
 
 /* image glass */
 /* ======================= */
@@ -65,12 +69,7 @@ img {vertical-align: middle;}
   height: 150px;
 }
 
-#hide {
-  display: none;
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 50%;
-}
+
 
 .btn {
   width: 100px;
@@ -84,23 +83,6 @@ img {vertical-align: middle;}
   height: 200px;
 }
 
-  /* desktop browsers */
-  @media screen and (min-width: 641px) {
-    .column {
-      -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
-    }
-  } 
-  
-/* phone screens */
-  @media screen and (max-width: 640px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-  } 
 
   .footer {
     position: fixed;
@@ -118,23 +100,24 @@ img {vertical-align: middle;}
 
 /* image portfolio gallery */
 
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+
+.container {
+  padding-top: 50px;
+}
+
+.contact {
+  margin-top: 20px;
+  border: 1px solid lightslategray;
+  padding: 50px;
+}
+
+.big {
+  text-align: center;
+}
