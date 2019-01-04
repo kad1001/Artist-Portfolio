@@ -116,8 +116,21 @@ img {vertical-align: middle;}
   margin-top: 20px;
   border: 1px solid lightslategray;
   padding: 50px;
+  position: relative;
 }
 
+.jumbotron {
+  position: relative;
+  background-color: white;
+}
 .big {
   text-align: center;
+}
+
+/* zoom buttons */
+
+
+.slidebtn {
+  position: absolute;
+  padding: 10px;
 }

@@ -46,10 +46,11 @@
   </nav>
 
 <div class="jumbotron">
+    <div class="big"><h1><logo>Welcome</logo></h1></div>
+    <hr>
+    <br>
   <div class="slideshow-container">
-    <button onclick="onClick()" id="btn1" type="button" class="btn btn-light"><i class="fas fa-search-plus"></i></button> 
-    <button onclick="zoomOut()" id="btn2" type="button" class="btn btn-light">Cancel</button>
-    <div class="img-magnifier-container mySlides">
+      <div class="img-magnifier-container mySlides">
       <img id="img1" src="img1.jpg" width="800" height="600">
     </div>
     <div class="img-magnifier-container mySlides">
@@ -58,12 +59,19 @@
     <div class="img-magnifier-container mySlides">
       <img id="img4" src="img4.jpg" width="800" height="600">
     </div>
+
+  <br>
+    <button onclick="onClick()" id="btn1" type="button" class="btn btn-light"><i class="fas fa-search-plus"></i></button> 
+    <button onclick="zoomOut()" id="btn2" type="button" class="btn btn-light">Cancel</button>
+  
   </div>
+  <a class="prev slidebtn" onclick="plusSlides(-1)">&#10094;</a>
+  
+  <a class="next slidebtn" onclick="plusSlides(1)">&#10095;</a>
+
 </div>
 
 
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 <div class="footer" style="width: 100%">Copyright Kelly Davis 2019 kad1001.github.io</p>
 </div>
