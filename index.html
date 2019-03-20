@@ -30,12 +30,11 @@
     </button>
       <!-- menu: "Home" "Drawings" "Contact" -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"  style="font-family: 'Thasadith', sans-serif;">
+      <ul class="navbar-nav mr-auto active">
+        <li class="nav-item"  style="font-family: 'Thasadith', sans-serif;">
           <a class="nav-link" href="index.html">Drawings<span class="sr-only">(current)</span></a>
         </li>
-        <!-- ============== -->
-        <!-- comment this out before finishing!! -->
+
         <li class="nav-item" style="font-family: 'Thasadith', sans-serif;">
           <a class="nav-link" href="contact.html">Hay</a>
         </li>
@@ -51,28 +50,16 @@
   </nav>
 
 <div class="jumbotron jumbotron-fluid">
-  <div class="big"><logo>Welcome to my dungeon</logo></h1></div>
+  <!-- <div class="big"><logo>Welcome to my dungeon</logo></h1></div> -->
     <hr>
-    <br>
-  <div class="slideshow-container">
-      <div class="img-magnifier-container mySlides">
-      <img id="img1" src="img1.jpg" width="800" height="600">
-    </div>
-    <div class="img-magnifier-container mySlides">
-      <img id="img2" src="img2.jpg" width="800" height="600" >
-    </div>
-    <div class="img-magnifier-container mySlides">
-      <img id="img4" src="img4.jpg" width="800" height="600">
-    </div>
-
-  <br>
-    <button onclick="onClick()" id="btn1" type="button" class="btn btn-light border"><i class="fas fa-search-plus"></i></button> 
-    <button onclick="zoomOut()" id="btn2" type="button" class="btn btn-light border">Cancel</button>
-  
+    <div class="row">
+      <div class="column">
+      <a href="img1.html">
+      <img src="./public/img/img1.jpg" width="1500px"; height="200px">
+    </a>
   </div>
-  <a class="prev slidebtn" onclick="plusSlides(-1)">&#10094;</a>
+    </div>
   
-  <a class="next slidebtn" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
 
@@ -88,6 +75,6 @@
 
 </body>
 <!-- javascript file link -->
-<script src="assets/javascript.js"></script>
+<!-- <script src="assets/javascript.js"></script> -->
 
 </html>
