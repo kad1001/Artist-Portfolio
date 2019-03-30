@@ -1,6 +1,7 @@
 /* Text */
 
   logo {
+    font-size: 38px;
   font-family: 'Megrim', cursive;
   }
   
@@ -20,6 +21,8 @@ img {
   margin-top: 8px;
   vertical-align: middle;
 }
+
+
 
 
 /* image glass */
