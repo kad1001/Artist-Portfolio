@@ -1,12 +1,4 @@
-
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial;
-  }
+/* Text */
 
   logo {
   font-family: 'Megrim', cursive;
@@ -23,8 +15,11 @@
   position:relative;
 }
 
-.img {
-  position: relative;
+img {
+  width: 100%;
+  margin-top: 8px;
+  vertical-align: middle;
+  /* height: 40px; */
 }
 
 
@@ -41,17 +36,17 @@
 }
 
 
-
+/* 
 .btn {
   width: 100px;
   height: 50px;
   position: relative;
 }
-
+ */
 
 
   .footer {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -66,33 +61,40 @@
 
 /* image portfolio gallery */
 
+
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  width: 100%;
 }
 
-
-
-.container {
-  padding-top: 50px;
-  flex-wrap: wrap;
+/* Create four equal columns that sits next to each other */
+.col-4 {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-.contact {
+@media screen and (max-width: 600px) {
+  .col-4 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* .contact {
   margin-top: 20px;
   border: 1px solid lightslategray;
   padding: 50px;
   position: relative;
-}
+} */
 
-.jumbotron {
+/* .jumbotron {
   position: relative;
   background-color: white;
   padding: 20px 0;
   margin-top: 20px;
-}
+} */
 .big {
   text-align: center;
 }
@@ -100,46 +102,46 @@
 /* zoom buttons */
 
 
-.clearfix::after {
+/* .clearfix::after {
   content: “”;
   display: block;
   clear: both;
-}
+} */
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 .slidebtn {
   position: absolute;
   padding: 10px;
 }
 
 
-.row.flex-container {
+/* .row.flex-container {
   justify-content: space-around;
-}
-div.relative {
+} */
+/* div.relative {
   position: relative;
   width: auto;
   padding: 20px;
-}
+} */
 
 
 
 
-div {
+/* div {
   display: block;
   padding: 2px;
   margin-bottom: 2px;
-}
+} */
 
-.flex-container {
+/* .flex-container {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-}
+} */
 
 /* On screens that are 640px wide or less, make the columns stack on top of each other instead of next to each other */
 /* @media screen and (max-width: 640px) {
